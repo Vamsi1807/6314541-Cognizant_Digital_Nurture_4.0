@@ -1,7 +1,7 @@
 package SingletonPatternExample;
 
 class Logger {
-    private static volatile Logger logger = null; // volatile for thread-safety
+    private static volatile Logger logger = null; 
 
     private Logger() {
         System.out.println("Logger instance created");
