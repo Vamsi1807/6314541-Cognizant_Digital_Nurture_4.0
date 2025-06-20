@@ -1,4 +1,4 @@
-package SingletonPatternExample;
+
 
 class Logger {
     private static volatile Logger logger = null; 

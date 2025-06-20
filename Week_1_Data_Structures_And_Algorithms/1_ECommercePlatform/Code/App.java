@@ -1,4 +1,4 @@
-package ECommercePlatform;
+
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package FactoryMethodPatternExample;
+
 
 public class PdfDocument implements Document {
 

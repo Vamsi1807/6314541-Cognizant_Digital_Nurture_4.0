@@ -1,4 +1,4 @@
-package ECommercePlatform;
+
 
 public class Platform {
     private int productId;

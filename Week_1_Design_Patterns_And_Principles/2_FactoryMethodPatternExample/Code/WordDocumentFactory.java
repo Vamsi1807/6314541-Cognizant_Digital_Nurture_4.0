@@ -1,4 +1,4 @@
-package FactoryMethodPatternExample;
+
 
 public class WordDocumentFactory extends DocumentFactory {
 
