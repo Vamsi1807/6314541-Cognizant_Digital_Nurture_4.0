@@ -12,7 +12,7 @@ public class FinanceForecast {
         int years = scanner.nextInt();
 
         double futureValue = compoundInterest(initialInvestment, annualInterestRate, years);
-        System.out.printf("The future value of the investment after %d years is: %.2f%n", years, futureValue);
+        System.out.printf("The future value after %d years is: %.2f%n", years, futureValue);
     }
 
     public static double compoundInterest(double principal, double rate, int years) {
