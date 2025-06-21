@@ -5,39 +5,44 @@ My superset id is : 6314541
 The rep structure is as follows : 
 
 
-├── Week_1_Data_Structures_And_Algorithms<br>
-│   ├── Exercise_2_ECommercePlatform<br>
-│   │   ├── Code<br>
-│   │   │   ├── App.java<br>
-│   │   │   └── Platform.java<br>
-│   │   └── Output<br>
-│   │       ├── ECommerce_Platform_Output_Case1.png<br>
-│   │       └── ECommerce_Platform_Output_Case2.png<br>
-│   └── Exercise_7_FinancialForecasting<br>
-│       ├── Code<br>
-│       │   └── FinanceForecast.java<br>
-│       └── Output<br>
-│           └── Finance_Forecasting_output.png<br>
-├── Week_1_Design_Patterns_And_Principles<br>
-│   ├── Exercise_1_SingletonPatternExample<br>
-│   │   ├── Code<br>
-│   │   │   ├── Logger.java<br>
-│   │   │   └── Tester.java<br>
-│   │   └── Output<br>
-│   │       └── Exercice_1_SingletonPatternExample.png<br>
-│   └── Exercise_2_FactoryMethodPatternExample<br>
-│       ├── Code<br>
-│       │   ├── Document.java<br>
-│       │   ├── DocumentFactory.java<br>
-│       │   ├── ExcelDocument.java<br>
-│       │   ├── ExcelDocumentFactory.java<br>
-│       │   ├── FactoryMethodTest.java<br>
-│       │   ├── PdfDocument.java<br>
-│       │   ├── PdfDocumentFactory.java<br>
-│       │   ├── WordDocument.java<br>
-│       │   └── WordDocumentFactory.java<br>
-│       └── Output<br>
-│           └── FactoryMethodExampleOutput.png<br>
+```
+.
+├── .gitignore
+├── README.md
+├── Week_1_Data_Structures_And_Algorithms
+│   ├── Exercise_2_ECommercePlatform
+│   │   ├── Code
+│   │   │   ├── App.java
+│   │   │   └── Platform.java
+│   │   └── Output
+│   │       ├── ECommerce_Platform_Output_Case1.png
+│   │       └── ECommerce_Platform_Output_Case2.png
+│   └── Exercise_7_FinancialForecasting
+│       ├── Code
+│       │   └── FinanceForecast.java
+│       └── Output
+│           └── Finance_Forecasting_output.png
+├── Week_1_Design_Patterns_And_Principles
+│   ├── Exercise_1_SingletonPatternExample
+│   │   ├── Code
+│   │   │   ├── Logger.java
+│   │   │   └── Tester.java
+│   │   └── Output
+│   │       └── Exercice_1_SingletonPatternExample.png
+│   └── Exercise_2_FactoryMethodPatternExample
+│       ├── Code
+│       │   ├── Document.java
+│       │   ├── DocumentFactory.java
+│       │   ├── ExcelDocument.java
+│       │   ├── ExcelDocumentFactory.java
+│       │   ├── FactoryMethodTest.java
+│       │   ├── PdfDocument.java
+│       │   ├── PdfDocumentFactory.java
+│       │   ├── WordDocument.java
+│       │   └── WordDocumentFactory.java
+│       └── Output
+│           └── FactoryMethodExampleOutput.png
+```
 
 
 This repo tree is organized based on weeks and modules..
