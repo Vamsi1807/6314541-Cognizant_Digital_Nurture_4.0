@@ -4,7 +4,7 @@ My superset id is : 6314541
 
 The rep structure is as follows : 
 
-.
+
 ├── Week_1_Data_Structures_And_Algorithms
 │   ├── Exercise_2_ECommercePlatform
 │   │   ├── Code
