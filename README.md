@@ -53,12 +53,4 @@ The rep structure is as follows :
 ```
 
 This repo tree is organized based on weeks and modules..
-To run the codes,
-Navigate to the appropriate Code directory and use the following commands:
 
-sh
-javac FileName.java
-java FileName
-
-
-Replace FileName with the main class you want to run (e.g., FinancialForecasting, Test, or FactoryMethodTest).
