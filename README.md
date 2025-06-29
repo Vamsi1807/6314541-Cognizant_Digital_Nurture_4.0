@@ -5,45 +5,52 @@ My superset id is : 6314541
 The rep structure is as follows : 
 
 
+## Repository Tree Structure 
+
+> This tree shows all directories up to and including every "Code" and "Output" folder in the repository's exercises.  
+> For the complete structure and recent updates, always refer to the [GitHub repository](https://github.com/Vamsi1807/6314541-Cognizant_Digital_Nurture_4.0).
+
 ```
 .
-├── .gitignore
-├── README.md
 ├── Week_1_Data_Structures_And_Algorithms
 │   ├── Exercise_2_ECommercePlatform
 │   │   ├── Code
-│   │   │   ├── App.java
-│   │   │   └── Platform.java
 │   │   └── Output
-│   │       ├── ECommerce_Platform_Output_Case1.png
-│   │       └── ECommerce_Platform_Output_Case2.png
 │   └── Exercise_7_FinancialForecasting
 │       ├── Code
-│       │   └── FinanceForecast.java
 │       └── Output
-│           └── Finance_Forecasting_output.png
 ├── Week_1_Design_Patterns_And_Principles
 │   ├── Exercise_1_SingletonPatternExample
 │   │   ├── Code
-│   │   │   ├── Logger.java
-│   │   │   └── Tester.java
 │   │   └── Output
-│   │       └── Exercice_1_SingletonPatternExample.png
 │   └── Exercise_2_FactoryMethodPatternExample
 │       ├── Code
-│       │   ├── Document.java
-│       │   ├── DocumentFactory.java
-│       │   ├── ExcelDocument.java
-│       │   ├── ExcelDocumentFactory.java
-│       │   ├── FactoryMethodTest.java
-│       │   ├── PdfDocument.java
-│       │   ├── PdfDocumentFactory.java
-│       │   ├── WordDocument.java
-│       │   └── WordDocumentFactory.java
 │       └── Output
-│           └── FactoryMethodExampleOutput.png
+├── Week_2_TDD_using_JUnit5_and_Mockito
+│   ├── JUnit
+│   │   ├── Exercise_1_Introduction_to_JUnit
+│   │   │   ├── Code
+│   │   │   └── Output
+│   │   ├── Exercise_2_Parameterized_Tests
+│   │   │   ├── Code
+│   │   │   └── Output
+│   │   ├── Exercise_3_Mocking_with_Mockito
+│   │   │   ├── Code
+│   │   │   └── Output
+│   │   └── Exercise_4_AAA_Pattern
+│   │       ├── Code
+│   │       └── Output
+├── Week_2_PLSQL_programming
+│   ├── Exercise_1_Basic_SQL
+│   │   ├── Code
+│   │   └── Output
+│   ├── Exercise_2_Functions_and_Triggers
+│   │   ├── Code
+│   │   └── Output
+│   └── Exercise_3_Stored_Procedures
+│       ├── Code
+│       └── Output
 ```
-
 
 This repo tree is organized based on weeks and modules..
 To run the codes,
