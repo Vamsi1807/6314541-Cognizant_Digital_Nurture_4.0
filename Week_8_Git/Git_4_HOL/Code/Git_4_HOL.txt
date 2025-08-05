@@ -1,0 +1,151 @@
+
+vamsi@Vamsii MINGW64 ~
+$ cd DgitDemo
+bash: cd: DgitDemo: No such file or directory
+
+vamsi@Vamsii MINGW64 ~
+$ cd GitDemo
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git checkout -b GitWork
+Switched to a new branch 'GitWork'
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitWork)
+$ echo "this is hello.xml in GitWork branch" >> hello.xml
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitWork)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitWork)
+$ git commit -m "hello.xml added to GitWork branch"
+[GitWork cf2777b] hello.xml added to GitWork branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 hello.xml
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ echo "this is hello.xml in main branch" >> hello.xml
+
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git add hello.xml
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git commit -m "hello.xml added in main branch"
+[main 153af55] hello.xml added in main branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate --all
+* 153af55 (HEAD -> main) hello.xml added in main branch
+| * cf2777b (GitWork) hello.xml added to GitWork branch
+|/
+* dec6219 (origin/main) demo2 added
+* cd6f3b7 demo1 file added
+* a0d2dad git ignore added to ignore .log files
+*   fcfb9ed Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo commit
+|\
+| * b939377 Delete welcome.txt
+| * 4268a4d welcome added
+| *   9c40f1c Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo welcome.txt added
+| |\
+| | * a0a1602 Initial commit
+| * 33ec5fd welcome added
+* 1bb16a1 welcome.txt added..
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git diff main..GitWork
+diff --git a/hello.xml b/hello.xml
+index 68d2615..62916fa 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1 +1,2 @@
++this is hello.xml in GitWork branch
+ this is hello.xml in main branch
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git mergetool
+No files need merging
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git difftool -t p4merge main..GitWork
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git merge GitWork
+Auto-merging hello.xml
+CONFLICT (add/add): Merge conflict in hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main|MERGING)
+$ git mergetool
+Merging:
+hello.xml
+
+Normal merge conflict for 'hello.xml':
+  {local}: created file
+  {remote}: created file
+<stdin>:4: trailing whitespace.
+this is hello.xml in GitWork branch
+error: invalid path './hello_BASE_1543.xml'
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main|MERGING)
+$ git commit -m "Merged GitWork branch with conflict resolution"
+[main 4e240d6] Merged GitWork branch with conflict resolution
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ echo "*.orig" >> .gitignore
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git add .gitignore
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git commit -m "Added original file to gitignore"
+[main 81d497e] Added original file to gitignore
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git branch
+  GitWork
+* main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git branch -d GitWork
+Deleted branch GitWork (was cf2777b).
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate
+* 81d497e (HEAD -> main) Added original file to gitignore
+*   4e240d6 Merged GitWork branch with conflict resolution
+|\
+| * cf2777b hello.xml added to GitWork branch
+* | 153af55 hello.xml added in main branch
+|/
+* dec6219 (origin/main) demo2 added
+* cd6f3b7 demo1 file added
+* a0d2dad git ignore added to ignore .log files
+*   fcfb9ed Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo commit
+|\
+| * b939377 Delete welcome.txt
+| * 4268a4d welcome added
+| *   9c40f1c Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo welcome.txt added
+| |\
+| | * a0a1602 Initial commit
+| * 33ec5fd welcome added
+* 1bb16a1 welcome.txt added..
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$
+
