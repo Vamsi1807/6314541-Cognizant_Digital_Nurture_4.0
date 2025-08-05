@@ -1,0 +1,33 @@
+
+vamsi@Vamsii MINGW64 ~
+$ cd GitDemo
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git branch -a
+* main
+  remotes/origin/main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git pull origin main
+From https://gitlab.com/cognizant-practice/GitDemo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 1.12 KiB | 382.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://gitlab.com/cognizant-practice/GitDemo.git
+   dec6219..81d497e  main -> main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$
