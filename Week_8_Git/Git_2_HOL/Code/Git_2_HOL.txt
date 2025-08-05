@@ -1,0 +1,60 @@
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ echo This is a sample log entry > test.log
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ notepad++ .gitignore
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git status --ignored
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+        test.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git add .
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git commit -m "git ignore added to ignore .log files"
+[main a0d2dad] git ignore added to ignore .log files
+ 1 file changed, 5 insertions(+)
+ create mode 100644 .gitignore
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 382 bytes | 382.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://gitlab.com/cognizant-practice/GitDemo.git
+   fcfb9ed..a0d2dad  main -> main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$

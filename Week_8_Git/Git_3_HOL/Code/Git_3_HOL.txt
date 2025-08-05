@@ -1,0 +1,139 @@
+
+vamsi@Vamsii MINGW64 ~
+$ git config --global --unset difftool.p4merge.cmd
+
+vamsi@Vamsii MINGW64 ~
+$ git config --global --unset mergetool.p4merge.cmd
+
+vamsi@Vamsii MINGW64 ~
+$ git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global mergetool.keepBackup false
+git config --global difftool.prompt false
+
+vamsi@Vamsii MINGW64 ~
+$ git config --global --list | grep p4merge
+diff.tool=p4merge
+difftool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+merge.tool=p4merge
+mergetool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+
+
+vamsi@Vamsii MINGW64 ~
+$ git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+vamsi@Vamsii MINGW64 ~
+$ cd GitDemo
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git branch
+  GitNewBranch
+* main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git checkout -b GitNewBranch
+fatal: a branch named 'GitNewBranch' already exists
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ git mergetool
+No files need merging
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ echo "Branch-specific content" > demo2.txt
+git add branch-file.txt
+fatal: pathspec 'branch-file.txt' did not match any files
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ echo "Branch-specific content" > demo2.txt
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ git add demo2.txt
+warning: in the working copy of 'demo2.txt', LF will be replaced by CRLF the next time Git touches it
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ git commit -m "demo2 added"
+[GitNewBranch dec6219] demo2 added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo2.txt
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ git status
+On branch GitNewBranch
+nothing to commit, working tree clean
+
+vamsi@Vamsii MINGW64 ~/GitDemo (GitNewBranch)
+$ git checkout main
+Switched to branch 'main'
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git diff main..GitNewBranch
+diff --git a/demo1.txt b/demo1.txt
+new file mode 100644
+index 0000000..f2ca673
+--- /dev/null
++++ b/demo1.txt
+@@ -0,0 +1 @@
++new file added in GitNewBranch branch..
+diff --git a/demo2.txt b/demo2.txt
+new file mode 100644
+index 0000000..1f187fa
+--- /dev/null
++++ b/demo2.txt
+@@ -0,0 +1 @@
++Branch-specific content
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git difftool -t p4merge main..GitNewBranch
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git merge GitNewBranch
+Updating a0d2dad..dec6219
+Fast-forward
+ demo1.txt | 1 +
+ demo2.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 demo1.txt
+ create mode 100644 demo2.txt
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate
+* dec6219 (HEAD -> main, GitNewBranch) demo2 added
+* cd6f3b7 demo1 file added
+* a0d2dad (origin/main) git ignore added to ignore .log files
+*   fcfb9ed Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo commit
+|\
+| * b939377 Delete welcome.txt
+| * 4268a4d welcome added
+| *   9c40f1c Merge branch 'main' of https://gitlab.com/cognizant-practice/GitDemo welcome.txt added
+| |\
+| | * a0a1602 Initial commit
+| * 33ec5fd welcome added
+* 1bb16a1 welcome.txt added..
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git branch -d GitNewBranch
+git status
+Deleted branch GitNewBranch (was dec6219).
+On branch main
+nothing to commit, working tree clean
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 621 bytes | 124.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://gitlab.com/cognizant-practice/GitDemo.git
+   a0d2dad..dec6219  main -> main
+
+vamsi@Vamsii MINGW64 ~/GitDemo (main)
+$
